@@ -12,28 +12,27 @@ Aplicativo mobile completo de previsão do tempo desenvolvido com **React Native
 
 ## 🚀 **Funcionalidades Implementadas**
 
-✅ **Busca inteligente de cidades brasileiras**  
-✅ **Clima atual completo**: temperatura, sensação térmica, chuva (%), vento, umidade, UV  
-✅ **Previsão de 5 dias** com ícones e temp. máxima  
-✅ **Gradiente dinâmico** (17 condições de tempo diferentes)  
-✅ **Ícones vetoriais** mapeados da Weatherbit → Material Icons  
-✅ **Layout responsivo** (Web + Mobile)  
-✅ **Tratamento de erros** (API limite, cidade não encontrada)  
-✅ **Geolocalização automática**  
-✅ **Animações suaves** (fade in + slide up)  
-✅ **Arquitetura modular** com custom hooks  
-✅ **Temperatura min/max real** (corrige bug)  
+✅ Busca de cidades brasileiras  
+✅ Clima atual completo: temperatura, sensação térmica, chuva (%), vento, umidade, UV  
+✅ Previsão de vários dias com ícones e temperatura máxima  
+✅ Gradiente dinâmico de fundo conforme o código de ícone da Weatherbit  
+✅ Ícones vetoriais mapeados de códigos (c01d, r01n, etc.) para MaterialCommunityIcons  
+✅ Layout responsivo (Web + Mobile)  
+✅ Tratamento de erros (cidade não encontrada, erro de API)  
+✅ Geolocalização automática via GPS  
+✅ Animações suaves com `Animated`  
+✅ Arquitetura modular com custom hooks   
 
 ## 🛠️ **Stack Tecnológica**
 
 ```
 ├── React Native + Expo SDK
+├── expo-router
 ├── expo-linear-gradient (gradientes)
-├── Animated API (animações nativas)
-├── expo-location (GPS automático)
-├── Weatherbit API
+├── expo-location (GPS / localização)
+├── Weatherbit API (clima atual + previsão diária)
 ├── Custom Hooks (useWeather, useAnimations)
-└── StyleSheet otimizado
+└── StyleSheet do React Native
 ```
 ## 🎯 **Como Executar (5 minutos)**
 
@@ -46,7 +45,8 @@ npm install
 ### 2. Configurar API Key GRÁTIS
 1. Crie conta em [Weatherbit.io](https://www.weatherbit.io) → **Free tier** (500 calls/dia)
 2. Copie sua API key
-3. Edite `src/services/weatherService.js`:
+3. Crie o arquivo `.env` na raiz do projeto:
+4. 4. O arquivo `app.config.js` já lê essa variável com `dotenv` e a expõe em `extra.WEATHER_API_KEY`, acessada via `expo-constants` no `weatherService.js`.
 ```
 const API_KEY = 'SUA_CHAVE_WEATHERBIT_AQUI';
 ```
@@ -62,19 +62,20 @@ npx expo start
 ## **Arquitetura do Projeto**
 
 ```
+src/
 ├── app/
-│ └──index.js ← App principal
+│   └── index.js          ← App principal
 ├── hooks/
-│ ├── useWeather.js ← API + estado
-│ └── useAnimations.js ← Animações nativas
+│   ├── useWeather.js     ← Lógica de clima + estado
+│   └── useAnimations.js  ← Animações
 ├── components/
-│ ├── WeatherCard.js ← Card principal
-│ ├── CityInput.js ← Input cidade
-│ └── WeatherIcon.js ← Ícones mapeados
+│   ├── WeatherCard.js    ← Card principal
+│   ├── CityInput.js      ← Input da cidade
+│   └── WeatherIcon.js    ← Ícones de clima
 ├── services/
-│ └── weatherService.js← API calls
+│   └── weatherService.js ← Chamadas à API Weatherbit
 └── styles/
-└── style.js ← Estilos globais
+    └── style.js          ← Estilos globais
 ```
 
 ## 🎨 **Destaques Técnicos**
