@@ -23,7 +23,7 @@ export default function CityInput({ city, setCity, onSubmitEditing }) {
         placeholderTextColor="#ffffffff"
         onFocus={() => setFocused(true)}
         onBlur={() => setFocused(false)}
-        selectionColor="#ffffff"   // cor da seleção/cursor
+        selectionColor="#ffffff"
       />
     </View>
   );

@@ -1,3 +1,4 @@
+// useWeather.js
 import { useState, useCallback } from 'react';
 import * as Location from 'expo-location';
 import { fetchWeatherData, fetchWeatherDataByCoords } from '../services/weatherService';

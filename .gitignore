@@ -1,4 +1,41 @@
-.env
+# Dependências
 node_modules/
-.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Expo / Metro / Cache
 .expo/
+.expo-shared/
+.expo-dev/
+.expo/web-cache/
+.expo-packager-cache-*
+.expo-cli-cache/
+.expo-settings/
+dist/
+web-build/
+*.expo*
+
+# Build nativo
+android/
+ios/
+*.apk
+*.aab
+
+# Ambiente / chaves
+.env
+.env.local
+.env.*.local
+expo-env.d.ts
+
+# Editor / SO
+.vscode/
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Testes
+coverage/
+jest-cache/
+jest-results.json

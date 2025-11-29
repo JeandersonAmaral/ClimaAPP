@@ -56,36 +56,40 @@ export const styles = StyleSheet.create({
     marginBottom: 24,
   },
   cityText: {
-    color: '#fff',
+    color: '#f6f6f6',
     fontSize: 35,
     fontWeight: 'bold',
   },
-  dateText: {
-    color: '#e5e7eb',
-    fontSize: 14,
-    marginTop: 4,
-  },
   timeText: {
-    color: '#e5e7eb',
+    color: '#f6f6f6',
     fontSize: 16,
   },
+  dateText: {
+    color: '#f6f6f6',
+    fontSize: 14,
+    textAlign: 'left',
+    position: 'absolute', 
+    bottom: -30,
+    left: 0,
+    right: 0,
+},
   mainBottom: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
   tempText: {
-    color: '#fff',
+    color: '#f6f6f6',
     fontSize: 48,
     fontWeight: 'bold',
   },
   minMaxText: {
-    color: '#e5e7eb',
+    color: '#f6f6f6',
     fontSize: 16,
     marginTop: 4,
   },
   descText: {
-    color: '#e5e7eb',
+    color: '#f6f6f6',
     fontSize: 16,
     marginTop: 8,
   },
@@ -102,22 +106,22 @@ export const styles = StyleSheet.create({
     paddingBottom: 2,
   },
   detailLabel: {
-    color: '#e5e7eb',
+    color: '#f6f6f6',
     fontSize: 16,
   },
   detailLabelTop: {
     paddingTop: 30,
-    color: '#e5e7eb',
+    color: '#f6f6f6',
     fontSize: 16,
   },
   detailValueTop: {
     paddingTop: 30,
-    color: '#e5e7eb',
+    color: '#f6f6f6',
     fontSize: 16,
     fontWeight: '600',
   },
   detailValue: {
-    color: '#e5e7eb',
+    color: '#f6f6f6',
     fontSize: 16,
     fontWeight: '600',
   },
@@ -131,27 +135,28 @@ export const styles = StyleSheet.create({
     textTransform: 'uppercase',
   },
   weekDay: {
-    color: '#e5e7eb',
+    color: '#f6f6f6',
     fontSize: 12,
     marginBottom: 4,
   },
   weekTemp: {
-    color: '#e5e7eb',
+    color: '#f6f6f6',
     fontSize: 15,
     marginTop: 4,
   },
   footer: {
     width: '100%',
     alignItems: 'center',
-    marginTop: 12,
+    marginTop: 10,
+    marginBottom: 30,
   },
-    footerText: {
-    color: '#e5e7eb',
+  footerText: {
+    color: '#f6f6f6',
     fontSize: 12,
   },
   error: {
     color: 'red',
     textAlign: 'center',
     marginTop: 12,
-},
+  },
 });

@@ -1,3 +1,4 @@
+// WeatherCard.js
 import React from 'react';
 import { View, Text, Animated } from 'react-native';
 import WeatherIcon from './WeatherIcon';
@@ -31,7 +32,8 @@ const WeatherCard = ({
   weather, 
   forecast, 
   animations, 
-  hora 
+  hora,
+  dataLegivel
 }) => {
   return (
     <View> 
@@ -41,6 +43,7 @@ const WeatherCard = ({
           <Text style={styles.cityText}>{weather?.name || '--'}</Text>
         </View>
         <Text style={styles.timeText}>{hora}</Text>
+        <Text style={styles.dateText}>{dataLegivel}</Text>
       </View>
 
       <View style={styles.mainBottom}>
